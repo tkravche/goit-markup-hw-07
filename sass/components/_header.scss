@@ -1,0 +1,96 @@
+.header__wrapper {
+    display: flex;
+}
+.header__line {
+    border-bottom: 1px solid #ececec;
+}
+  /* Logo */
+.logo {
+    display: block;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    &--accent {
+            color: var(--accent-color);
+        }
+}
+.header__logo {
+    padding: 24px 0;
+    margin-right: 93px;
+    color: var(--logo-color);
+}
+/* Navigation */
+.site-nav__wrapper,
+.contacts__wrapper {
+    display: flex;
+    align-items: center;
+}
+.site-nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    color: var(--secondary-text-color);
+    &--current {
+            color: var(--accent-color);
+            position: relative;
+        }
+&--current:after {
+            display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                height: 4px;
+                width: 100%;
+                background: var(--accent-color);
+                border-radius: 2px;
+}
+}
+.site-nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+/* Contacts */
+.contacts {
+    margin-left: auto;
+}
+.contacts__link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    &:hover .contacts_icon--envelope,
+        &:hover .contacts_icon--smartphone,
+        &:focus .contacts_icon--envelope,
+        &:focus .contacts_icon--smartphone {
+            fill: var(--accent-color);
+        }
+}
+
+.contacts__item+.contacts__item {
+    margin-left: 50px;
+}
+
+.contacts_icon--envelope,
+.contacts_icon--smartphone {
+    margin-right: 10px;
+    fill: var(--primary-text-color);
+    transition: fill var(--animation);
+}
+
+.contacts_icon--smartphone {
+    vertical-align: bottom;
+}
+
